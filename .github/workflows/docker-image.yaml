@@ -11,8 +11,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: build image
-        run: docker build -t razrvfx/password-strength-tester:latest .
+        run: docker build -t razrvfx/password-strength-checker:latest .
       - name: push image
         run: |
           docker login -u razrvfx -p ${{ secrets.DOCKER_HUB_TOKEN }}
-          docker push razrvfx/password-strength-tester:latest
+          docker push razrvfx/password-strength-checker:latest
